@@ -1,0 +1,290 @@
+/*
+ <dtml-with base_properties> (do not remove this)
+ <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this
+ either)
+ */
+
+body {
+	font: 60% Arial, Helvetica, Geneva, sans-serif;
+	background:#fff;
+}
+
+ /* content text styles */
+h1, h2, h3, h4, h5, h6 {
+    color: #069;
+    font-family: Arial, Helvetica, Geneva, sans-serif;
+    margin: 0.75em 0 0.25em 0;
+    border: none;
+}
+
+h1 {
+    font-size: 140%;
+}
+h2 {
+    font-size: 130%;
+}
+
+#visual-portal-wrapper {
+	margin:0 auto !important;
+    padding: 0 !important;
+    width:740px !important; 
+    /* width:960px !important;*/
+	background:#fff url(++resource++c50theme.countrycourier.images/logo.jpg) scroll no-repeat top center;
+}
+
+#portal-top {
+	background:transparent url(&dtml-portal_url;/logo.gif) scroll no-repeat top center;
+}
+
+.section-accueil #portal-top,
+.section-home #portal-top,
+.section-onthaal #portal-top {
+	background-image: none !important;
+}
+
+
+/** LOGO **/
+#portal-logo img {
+	margin: 18px 0 0 18px;
+}
+
+/* hide logo-cee.png for iE6 */
+* html #portal-logo .logo-png {
+	display: none;
+}
+
+/* bacground image by sections */
+.section-about-us #visual-portal-wrapper,
+.section-qui-sommes-nous #visual-portal-wrapper,
+.section-wie-zijn-we #visual-portal-wrapper  {
+   background: url(++resource++c50theme.countrycourier.images/about.jpg) no-repeat !important;
+   width: 740px;  
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+
+.section-courrier-aerien #visual-portal-wrapper,
+.section-luchtpost #visual-portal-wrapper,
+.section-air-courier #visual-portal-wrapper  {
+   background: url(++resource++c50theme.countrycourier.images/air.jpg) no-repeat !important;
+   width: 740px;  
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+
+.section-commandes #visual-portal-wrapper  {
+   background: url(++resource++c50theme.countrycourier.images/commandes.jpg) no-repeat !important;
+   width: 740px;  
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+
+.section-service-express #visual-portal-wrapper,
+.section-expressdienst #visual-portal-wrapper,
+.section-express-service #visual-portal-wrapper  {
+   background: url(++resource++c50theme.countrycourier.images/service-express.jpg) no-repeat !important;
+   width: 740px;  
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+
+.section-promotions #visual-portal-wrapper,
+.section-promoties #visual-portal-wrapper,
+.section-jobs #visual-portal-wrapper  {
+   background: url(++resource++c50theme.countrycourier.images/promos.jpg) no-repeat !important;
+   width: 740px;  
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+
+.section-messagerie-24-48h #visual-portal-wrapper,
+.section-koerierdienst-24-48-uur #visual-portal-wrapper,
+.section-express-service-1 #visual-portal-wrapper {
+   background: url(++resource++c50theme.countrycourier.images/messagerie.jpg) no-repeat !important;
+   width: 740px;  
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+
+.section-tournees-et #visual-portal-wrapper,
+.section-leveringsrondes-en #visual-portal-wrapper,
+.section-organisation-of-delivery-rental-of-a-vehicle-with-driver #visual-portal-wrapper {
+   background: url(++resource++c50theme.countrycourier.images/tournees.jpg) no-repeat !important;
+   width: 740px;  
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+
+.section-online-bestellen #visual-portal-wrapper,
+.section-booking-online #visual-portal-wrapper {
+   background: url(++resource++c50theme.countrycourier.images/commandes.jpg) no-repeat !important;
+   width: 740px;  
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+
+.section-sondage-05-2007 #portlet-language,
+.section-peiling-05-2007 #portlet-language {
+   display: none;
+}
+
+
+/** table content positionning **/
+#portal-top {
+	margin-bottom: 140px;
+}
+
+
+#portal-languageselector {
+position: relative;
+top: 0px;
+left: -500px;
+float: right;
+background-color : transparent;
+border: 0px;
+font: 10px Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+#portal-languageselector a {
+color: #FFFFFF;
+background-color: transparent;
+padding-right:2px;
+padding-left:2px;
+text-transform: uppercase;
+text-decoration: none;
+}
+
+.section-commandes #portal-languageselector {
+position: relative;
+top: -254px;
+left: -500px;
+float: right;
+background-color : transparent;
+border: 0px;
+font: 10px Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+#portal-languageselector a:hover {
+color: #CC6600;
+background-color: transparent;
+height: 20px;
+}
+#portal-languageselector a:active, .currentitem {
+text-decoration: none;
+color: #DED673
+}
+
+.section-tournees-et #portal-languageselector a,
+.section-leveringsrondes-en #portal-languageselector a,
+.section-organisation-of-delivery-rental-of-a-vehicle-with-driver #portal-languageselector a,
+.section-messagerie-24-48h #portal-languageselector a,
+.section-koerierdienst-24-48-uur #portal-languageselector a,
+.section-express-service-1 #portal-languageselector a,
+.section-promoties #portal-languageselector a,
+.section-promoties #portal-languageselector a,
+.section-jobs #portal-languageselector a,
+.section-promotions #portal-languageselector a,
+.section-about-us #portal-languageselector a,
+.section-qui-sommes-nous #portal-languageselector a,
+.section-wie-zijn-we #portal-languageselector a,
+.section-courrier-aerien #portal-languageselector a,
+.section-luchtpost #portal-languageselector a,
+.section-air-courier #portal-languageselector a,
+.section-service-express #portal-languageselector a,
+.section-expressdienst #portal-languageselector a,
+.section-express-service #portal-languageselector a
+{
+color: #0066cc;
+background-color: transparent;
+padding-right:2px;
+padding-left:2px;
+text-transform: uppercase;
+text-decoration: none;
+}
+
+/* content */
+.documentContent {
+  background-color: transparent;
+}
+
+.documentFirstHeading {
+  /*   text-transform: none;
+ font-size: 16px;
+ font-style: italic;  
+ font-weight: bold; 
+ color: #0F3B86; */
+ border: none;
+}
+
+/*** NAVIGATION ***/
+/* remove standard icons from navigation portlets an sitemap */
+.navTreeItem img {
+    display: none !important;
+}
+
+.portletItem {
+	border: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+.navTreeItem a,
+dd.portletItem .navTreeItem a {
+    border: 0px solid White;
+    background: transparent url("++resource++c50theme.countrycourier.images/navbutton.gif") no-repeat !important;
+    display: block;
+    text-decoration: none;
+    padding-top: 7px;
+    padding-bottom: 0;
+    color: #3b3b3b;
+	height: 32px;
+	width: 162px;
+}
+.navTreeItem a:hover,
+dd.portletItem .navTreeItem a:hover {
+    background: transparent url("++resource++c50theme.countrycourier.images/navbutton.gif") no-repeat !important;
+    color: #779120;
+    border: 0px solid #8cacbb;
+}
+.navTreeCurrentItem {
+    background: transparent url("++resource++c50theme.countrycourier.images/navbutton.gif") no-repeat !important;
+    color: #3b3b3b;
+    border: 0px solid #8cacbb !important;
+}
+
+.navTreeItem a span {
+	margin-left: 50px;
+}
+
+
+dl.portlet.portletNavigationTree dt.portletHeader {
+	display: none;
+}
+
+.navTreeLevel1 {
+	display: none;
+}
+
+.portlet {
+	border-bottom: 0px;
+}
+
+.portletLogin {
+	display: none;
+}
+
+#portal-personaltools {
+	background: none;
+	border: none;
+}
+
+
+/** FOOTER **/
+#portal-footer,
+#portal-colophon {
+	display: none;
+}
+
+
+
+/* </dtml-with> */

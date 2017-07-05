@@ -1,0 +1,23 @@
+Metadata-Version: 1.0
+Name: c50theme.countrycourier
+Version: 1.0
+Summary: An installable theme for Plone 3
+Home-page: https://svn.c50-hosting.com/themes
+Author: Eric Lemonne
+Author-email: eric@c50.be
+License: GPL
+Description: Introduction
+        ============
+        
+        
+        
+        Changelog
+        =========
+        
+        1.0dev (unreleased)
+        -------------------
+        
+        - Initial release
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python

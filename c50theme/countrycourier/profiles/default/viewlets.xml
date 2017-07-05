@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- This file holds the setup configuration of the viewlet managers
+     for the "Country Courier" skin.
+     -->
+
+<object>
+  <hidden manager="plone.portaltop" skinname="Country Courier"
+         based-on="Plone Default">
+	<viewlet name="plone.path_bar" />
+	<viewlet name="plone.personal_bar" />
+  </hidden>
+
+  <order manager="plone.portalheader" skinname="Country Courier"
+         based-on="Plone Default">
+	<viewlet name="plone.logo" insert-before="*"/>
+  </order>
+
+  <hidden manager="plone.portalheader" skinname="Country Courier">
+    <viewlet name="plone.global_sections" />
+    <viewlet name="plone.searchbox" />
+	<viewlet name="plone.site_actions" />
+  </hidden>
+
+  <order manager="plone.abovecontent" skinname="Country Courier"
+         based-on="Plone Default">
+	<viewlet name="plone.personal_bar" insert-before="*"/>
+	<viewlet name="plone.site_actions" />
+  </order>
+
+</object>

@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="c50theme.countrycourier">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Country Courier"
+      directory="profiles/default"
+      description='Extension profile for the "Country Courier" Plone theme.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="c50theme.countrycourier.various"
+      title="Country Courier: miscellaneous import steps"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="c50theme.countrycourier.setuphandlers.setupVarious">
+    <depends name="skins"/>
+  </genericsetup:importStep>
+
+</configure>

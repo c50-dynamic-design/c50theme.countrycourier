@@ -1,0 +1,88 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="c50theme.countrycourier">
+
+  <!-- 'Country Courier' Zope 3 browser layer
+    Register views, viewlets and resources for this layer to make sure
+    they only apply to the 'Country Courier' theme.
+    You can also use this layer to override default Plone browser views
+    and viewlets only within the 'Country Courier' theme.
+  -->
+  <interface
+      interface=".interfaces.IThemeSpecific"
+      type="zope.publisher.interfaces.browser.IBrowserSkinType"
+      name="Country Courier"
+      />
+  
+  <!-- Viewlets registration -->
+  <!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
+  <browser:viewlet
+      name="c50theme.someviewlet"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".viewlets.MyViewlet"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View"
+      />
+  -->
+    <!-- The logo -->
+  <browser:viewlet
+      name="plone.logo"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".viewlets.LogoViewlet"
+      permission="zope2.View" 
+      layer=".interfaces.IThemeSpecific"
+      />
+
+	<!-- The personal bar -->
+  <browser:viewlet
+      name="plone.personal_bar"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+      class="plone.app.layout.viewlets.common.PersonalBarViewlet"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View" 
+      />
+
+	<!-- Site actions -->
+  <browser:viewlet
+      name="plone.site_actions"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+      class="plone.app.layout.viewlets.common.SiteActionsViewlet"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View" 
+      />
+
+	<!-- Language Selector -->
+  <browser:viewlet
+      name="plone.app.i18n.locales.languageselector"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      class="Products.LinguaPlone.browser.selector.TranslatableLanguageSelector"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View" 
+      />	
+
+  <!-- Zope 3 browser resources -->
+
+  <!-- Resource directory for images
+    See c50theme/countrycourier/browser/images/README.txt
+    for more information about registering images as Zope 3 browser
+    resources.
+  -->
+  <browser:resourceDirectory
+      name="c50theme.countrycourier.images"
+      directory="images"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- Resource directory for stylesheets
+    See c50theme/countrycourier/browser/stylesheets/README.txt
+    for more information about registering stylesheets as Zope 3 browser
+    resources.
+  -->
+  <browser:resourceDirectory
+      name="c50theme.countrycourier.stylesheets"
+      directory="stylesheets"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+</configure>
